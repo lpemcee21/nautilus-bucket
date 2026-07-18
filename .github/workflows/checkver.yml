@@ -1,21 +1,19 @@
-name: Checkver
+name: Excavator
 on:
-  schedule:
-    - cron: '0 6 * * *'  # Daily 6am UTC
   workflow_dispatch:
-
+  schedule:
+    - cron: '20 */4 * * *'  # Every 4 hours (matches official template)
 permissions:
   contents: write
-  pull-requests: write
-
 jobs:
-  checkver:
-    runs-on: ubuntu-latest
+  excavate:
+    name: Excavate
+    runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: ScoopInstaller/scoop-checkver-action@v1
-        with:
-          bucket: nautilus-bucket
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Excavate
+        uses: ScoopInstaller/GithubActions@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SKIP_UPDATED: '1'

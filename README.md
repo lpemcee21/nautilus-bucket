@@ -13,9 +13,7 @@ scoop install <app>
 
 | App | Version | Description |
 |-----|---------|-------------|
-| [axis](bucket/axis.json) | `1.5.0` | Axis is an open-source desktop application built with HTML, CSS, JavaScript, and Tauri that lets you compare, rank, and organize virtually anything.
-
-Games, movies, anime, phones, PC hardware, books, cars — if it can be rated, it can be ranked. |
+| [axis](bucket/axis.json) | `1.5.0` | Axis is an open-source desktop application built with HTML, CSS, JavaScript, and Tauri that lets you compare, rank, and organize virtually anything. Games, movies, anime, phones, PC hardware, books, cars — if it can be rated, it can be ranked. |
 
 ## Adding This Bucket
 

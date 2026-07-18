@@ -9,14 +9,18 @@
       "hash": "2BCB5FC2A7E07A6F42B90AC137CB26EC56441A8450766BE3DE29B0FD6AA35344"
     }
   },
-  "installer": {
-    "script": [
-      "Expand-MsiArchive \"$dir\\Axis_1.5.0_x64_en-US.msi\" -DestinationPath \"$dir\\extracted\"",
-      "Move-Item \"$dir\\extracted\\Program Files\\Axis\\Axis.exe\" \"$dir\\Axis.exe\"",
-      "Remove-Item \"$dir\\extracted\" -Recurse -Force",
-      "Remove-Item \"$dir\\Axis_1.5.0_x64_en-US.msi\" -Force"
-    ]
-  },
+"installer": {
+  "script": [
+    "$msi = Get-ChildItem \"$dir\\*.msi\" | Select-Object -First 1",
+    "if (-not $msi) { throw \"No MSI found in $dir\" }",
+    "Expand-MsiArchive \"$dir\\$($msi.Name)\" -DestinationPath \"$dir\\extracted\"",
+    "$exe = Get-ChildItem \"$dir\\extracted\\**\\Axis.exe\" -Recurse | Select-Object -First 1",
+    "if (-not $exe) { throw \"Axis.exe not found in extracted MSI\" }",
+    "Move-Item \"$exe.FullName\" \"$dir\\Axis.exe\"",
+    "Remove-Item \"$dir\\extracted\" -Recurse -Force",
+    "Remove-Item \"$dir\\*.msi\" -Force"
+  ]
+},
   "bin": "Axis.exe",
   "shortcuts": [
     [

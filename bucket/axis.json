@@ -6,16 +6,10 @@
   "architecture": {
     "64bit": {
       "url": "https://github.com/PR0Gorib/Axis/releases/download/v1.5.0/Axis_1.5.0_x64_en-US.msi",
-      "hash": "2BCB5FC2A7E07A6F42B90AC137CB26EC56441A8450766BE3DE29B0FD6AA35344"
+      "hash": "YOUR_HASH_HERE"
     }
   },
-"installer": {
-  "script": [
-    "$exe = Get-ChildItem \"$dir\\**\\Axis.exe\" -Recurse | Select-Object -First 1",
-    "if (-not $exe) { throw \"Axis.exe not found in $dir\" }",
-    "Move-Item \"$exe.FullName\" \"$dir\\Axis.exe\""
-  ]
-},
+  "extract_dir": "PFiles\\Axis",
   "bin": "Axis.exe",
   "shortcuts": [
     [

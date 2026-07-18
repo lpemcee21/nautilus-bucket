@@ -1,6 +1,6 @@
 # nautilus-bucket
 
-Personal Scoop bucket for apps I use and maintain.
+Scoop bucket for apps I couldn't find elsewhere
 
 ## Installation
 

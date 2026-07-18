@@ -1,4 +1,5 @@
 # nautilus-bucket
+[![Excavator](https://github.com/lpemcee21/nautilus-bucket/actions/workflows/checkver.yml/badge.svg)](https://github.com/lpemcee21/nautilus-bucket/actions/workflows/checkver.yml)
 
 Personal Scoop bucket for apps I use and maintain.
 

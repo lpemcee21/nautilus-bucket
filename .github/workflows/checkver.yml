@@ -1,0 +1,21 @@
+name: Checkver
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Daily 6am UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  checkver:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: ScoopInstaller/scoop-checkver-action@v1
+        with:
+          bucket: nautilus-bucket
+          token: ${{ secrets.GITHUB_TOKEN }}

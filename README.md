@@ -1,12 +1,17 @@
 # nautilus-bucket
 
+<<<<<<< HEAD
 Personal Scoop bucket for apps I use and maintain.
+=======
+Scoop bucket for apps I couldn't find elsewhere
+>>>>>>> 1100e344240818f058c9910dd466eac71abeea10
 
 ## Installation
 
 ```powershell
 scoop bucket add nautilus-bucket https://github.com/lpemcee21/nautilus-bucket
 scoop install <app>
+<<<<<<< HEAD
 ```
 
 ## Available Apps
@@ -57,3 +62,5 @@ This is a personal bucket, but feel free to:
 ## License
 
 MIT — see individual manifests for app licenses.
+=======
+>>>>>>> 1100e344240818f058c9910dd466eac71abeea10

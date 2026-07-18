@@ -1,12 +1,12 @@
 {
   "version": "1.5.0",
-  "description": "Axis - Rank anything. Import, share, and get started.",
+  "description": "Axis is an open-source desktop application built with HTML, CSS, JavaScript, and Tauri that lets you compare, rank, and organize virtually anything. Games, movies, anime, phones, PC hardware, books, cars — if it can be rated, it can be ranked.",
   "homepage": "https://github.com/PR0Gorib/Axis",
   "license": "MIT",
   "architecture": {
     "64bit": {
       "url": "https://github.com/PR0Gorib/Axis/releases/download/v1.5.0/Axis_1.5.0_x64_en-US.msi",
-      "hash": "YOUR_HASH_HERE"
+      "hash": "2bcb5fc2a7e07a6f42b90ac137cb26ec56441a8450766be3de29b0fd6aa35344"
     }
   },
   "extract_dir": "PFiles\\Axis",

@@ -1,0 +1,33 @@
+{
+  "version": "3.4.6",
+  "description": "A rhythm game chart searching and downloading tool for Clone Hero, YARG, and other rhythm games.",
+  "homepage": "https://github.com/joaoguilherme-devsec/Bridge",
+  "license": "GPL-3.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/joaoguilherme-devsec/Bridge/releases/download/v3.4.6/Bridge-Setup-3.4.6.exe",
+      "hash": "d58d1a7857af9a6c0ba6eb027f6f01ad3c94d6312a2470a187e5eed88cc4935e"
+    }
+  },
+  "installer": {
+    "script": [
+      "Expand-7zipArchive \"$dir\\Bridge-Setup-3.4.6.exe\" \"$dir\"",
+      "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+      "Remove-Item \"$dir\\Bridge-Setup-3.4.6.exe\" -Force",
+      "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force"
+    ]
+  },
+  "bin": "Bridge.exe",
+  "shortcuts": [["Bridge.exe", "Bridge"]],
+  "checkver": {
+    "github": "joaoguilherme-devsec/Bridge",
+    "regex": "v([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/joaoguilherme-devsec/Bridge/releases/download/v$version/Bridge-Setup-$version.exe"
+      }
+    }
+  }
+}

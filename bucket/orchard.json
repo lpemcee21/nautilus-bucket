@@ -1,0 +1,38 @@
+{
+  "version": "4.1.0",
+  "description": "A desktop YouTube Music client with smart crossfade, synced lyrics, release tracking, and native builds.",
+  "homepage": "https://sfg545.dev/orchard/",
+  "license": "AGPL-3.0-or-later",
+  "architecture": {
+    "64bit": {
+      "url": "https://downloads.sfg545.dev/orchard/Orchard-Setup-4.1.0.exe",
+      "hash": "faab3ef3dc40a572fb5a705655f7f74ab6a860d9a758aa99df034d2dd82d4f2c"
+    }
+  },
+  "installer": {
+    "script": [
+      "Expand-7zipArchive \"$dir\\Orchard-Setup-4.1.0.exe\" \"$dir\"",
+      "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+      "Remove-Item \"$dir\\Orchard-Setup-4.1.0.exe\" -Force",
+      "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force"
+    ]
+  },
+  "bin": "Orchard.exe",
+  "shortcuts": [
+    [
+      "Orchard.exe",
+      "Orchard"
+    ]
+  ],
+  "checkver": {
+    "github": "SFG5453/Orchard",
+    "regex": "v([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://downloads.sfg545.dev/orchard/Orchard-Setup-$version.exe"
+      }
+    }
+  }
+}

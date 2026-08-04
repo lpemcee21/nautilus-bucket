@@ -1,0 +1,32 @@
+{
+  "version": "1.1",
+  "description": "A modern cross-platform music player for Android and Windows, built with Flutter and powered by YouTube Music.",
+  "homepage": "https://github.com/VikrantRuhela/DA-Tunes",
+  "license": "GPL-3.0-only",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/VikrantRuhela/DA-Tunes/releases/download/DA-Tunes-V1.1/DA-Tunes-V1.1-Windows-x64.zip",
+      "hash": "85ea887ec410a6618fa00406275efb6ddaeb02361db24dd640829ae140ebb138"
+    }
+  },
+  "extract_dir": "DA-Tunes-V1.1-Windows-x64",
+  "bin": "da_tunes.exe",
+  "shortcuts": [
+    [
+      "da_tunes.exe",
+      "DA Tunes"
+    ]
+  ],
+  "checkver": {
+    "github": "VikrantRuhela/DA-Tunes",
+    "regex": "DA-Tunes-V([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/VikrantRuhela/DA-Tunes/releases/download/DA-Tunes-V$version/DA-Tunes-V$version-Windows-x64.zip"
+      }
+    },
+    "extract_dir": "DA-Tunes-V$version-Windows-x64"
+  }
+}

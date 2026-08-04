@@ -1,60 +1,63 @@
 # nautilus-bucket
 [![Excavator](https://github.com/lpemcee21/nautilus-bucket/actions/workflows/checkver.yml/badge.svg)](https://github.com/lpemcee21/nautilus-bucket/actions/workflows/checkver.yml)
 
-Personal Scoop bucket for apps I can't find elsewhere.
+Personal Scoop bucket for applications and tools not available in official Scoop buckets.
 
-## Installation
+## Installation & Usage
+
+### 1. Add the Bucket
 
 ```powershell
 scoop bucket add nautilus-bucket https://github.com/lpemcee21/nautilus-bucket
-scoop install <app>
+```
+
+### 2. Install Apps
+
+You can install any app directly by name or by prefixing the bucket name to avoid conflicts:
+
+```powershell
+# Search available apps in this bucket
+scoop search nautilus-bucket/
+
+# Install by app name
+scoop install orchard
+
+# Or explicitly from nautilus-bucket
+scoop install nautilus-bucket/orchard
 ```
 
 ## Available Apps
 
-| App | Version | Description |
-|-----|---------|-------------|
-| [axis](bucket/axis.json) | `1.5.0` | Axis is an open-source desktop application built with HTML, CSS, JavaScript, and Tauri that lets you compare, rank, and organize virtually anything. Games, movies, anime, phones, PC hardware, books, cars — if it can be rated, it can be ranked. |
-
-## Adding This Bucket
-
-```powershell
-# Add bucket
-scoop bucket add nautilus-bucket https://github.com/lpemcee21/nautilus-bucket
-
-# List available apps
-scoop search nautilus-bucket/
-
-# Install an app
-scoop install axis
-```
+| App | Version | Description | Install Command |
+|-----|---------|-------------|-----------------|
+| [axis](bucket/axis.json) | `1.5.0` | Compare, rank, and organize anything (games, movies, tech, etc.). | `scoop install nautilus-bucket/axis` |
+| [bridge](bucket/bridge.json) | `3.4.6` | Rhythm game chart search & downloader for Clone Hero & YARG. Community fork of Gravitron's Bridge (provided as-is). | `scoop install nautilus-bucket/bridge` |
+| [da-tunes](bucket/da-tunes.json) | `1.1` | Modern cross-platform music player for Windows & Android powered by YouTube Music. | `scoop install nautilus-bucket/da-tunes` |
+| [orchard](bucket/orchard.json) | `4.1.0` | Desktop YouTube Music client with smart crossfade, synced lyrics, and release tracking. | `scoop install nautilus-bucket/orchard` |
 
 ## Updating Apps
 
-Apps are updated via `checkver`/`autoupdate` in each manifest. To check for updates:
+Apps in this bucket are automatically tracked and updated via `checkver` / `autoupdate`.
+
+To update Scoop and all installed applications:
 
 ```powershell
 scoop update
-scoop status
+scoop update *
 ```
 
 ## Manifest Structure
 
-Each app has a JSON manifest in `bucket/` following [Scoop's manifest schema](https://github.com/ScoopInstaller/Scoop/blob/master/docs/manifest-format.md).
-
-Key fields used:
-- `checkver` + `autoupdate` — auto-detect new releases from GitHub
-- `extract_dir` — for MSI installers
-- `shortcuts` — Start Menu integration
-- `persist` — preserve user data across updates (when needed)
+Each manifest in `bucket/` adheres to [Scoop's manifest schema](https://github.com/ScoopInstaller/Scoop/blob/master/docs/manifest-format.md) and features:
+- Automatic upstream release tracking (`checkver` & `autoupdate`)
+- Start Menu shortcut creation (`shortcuts`)
+- Extraction of MSI and 7-Zip/NSIS installer binaries (`installer` & `extract_dir`)
 
 ## Contributing
 
-This is a personal bucket, but feel free to:
-- Open issues for broken manifests
-- Suggest new apps via issues
-- Fork and maintain your own copy
+- Report broken manifests or outdated versions via [GitHub Issues](https://github.com/lpemcee21/nautilus-bucket/issues).
+- Pull requests for manifest improvements are welcome.
 
 ## License
 
-MIT — see individual manifests for app licenses.
+MIT — see individual manifests for specific application licenses.

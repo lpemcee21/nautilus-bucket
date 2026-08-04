@@ -23,7 +23,7 @@ scoop search nautilus-bucket/
 scoop install orchard
 
 # Or explicitly from nautilus-bucket
-scoop install nautilus-bucket/orchard
+scoop install nautilus-bucket/axis
 ```
 
 ## Available Apps

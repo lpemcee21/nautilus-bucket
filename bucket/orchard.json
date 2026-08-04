@@ -1,19 +1,19 @@
 {
-  "version": "4.1.0",
+  "version": "4.2.0",
   "description": "A desktop YouTube Music client with smart crossfade, synced lyrics, release tracking, and native builds.",
   "homepage": "https://sfg545.dev/orchard/",
   "license": "AGPL-3.0-or-later",
   "architecture": {
     "64bit": {
-      "url": "https://downloads.sfg545.dev/orchard/Orchard-Setup-4.1.0.exe",
-      "hash": "faab3ef3dc40a572fb5a705655f7f74ab6a860d9a758aa99df034d2dd82d4f2c"
+      "url": "https://downloads.sfg545.dev/orchard/Orchard-Setup-4.2.0.exe",
+      "hash": "9a182b647c1bce2e9e97a943e5a72355f9dc9afb1630f95f48b7b6e1dc84f12e"
     }
   },
   "installer": {
     "script": [
-      "Expand-7zipArchive \"$dir\\Orchard-Setup-4.1.0.exe\" \"$dir\"",
+      "Expand-7zipArchive \"$dir\\Orchard-Setup-$version.exe\" \"$dir\"",
       "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-      "Remove-Item \"$dir\\Orchard-Setup-4.1.0.exe\" -Force",
+      "Remove-Item \"$dir\\Orchard-Setup-$version.exe\" -Force",
       "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force"
     ]
   },
@@ -25,8 +25,8 @@
     ]
   ],
   "checkver": {
-    "github": "SFG5453/Orchard",
-    "regex": "v([\\d.]+)"
+    "url": "https://downloads.sfg545.dev/orchard/latest.yml",
+    "regex": "version:\\s*([\\d.]+)"
   },
   "autoupdate": {
     "architecture": {

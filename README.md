@@ -43,7 +43,7 @@ To update Scoop and all installed applications:
 
 ```powershell
 scoop update
-scoop update * 
+scoop update *
 ```
 
 ## Manifest Structure

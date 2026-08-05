@@ -28,12 +28,12 @@ scoop install nautilus-bucket/bridge
 
 ## Available Apps
 
-| App | Version | Description | Install Command |
-|-----|---------|-------------|-----------------|
-| [axis](bucket/axis.json) | `1.5.0` | Compare, rank, and organize anything (games, movies, tech, etc.). | `scoop install nautilus-bucket/axis` |
-| [bridge](bucket/bridge.json) | `3.4.6` | Rhythm game chart search & downloader for Clone Hero & YARG. Community fork of Gravitron's Bridge (provided as-is). | `scoop install nautilus-bucket/bridge` |
-| [da-tunes](bucket/da-tunes.json) | `1.1` | Modern cross-platform music player for Windows & Android powered by YouTube Music. | `scoop install nautilus-bucket/da-tunes` |
-| [orchard](bucket/orchard.json) | `4.2.0` | Desktop YouTube Music client with smart crossfade, synced lyrics, and release tracking. | `scoop install nautilus-bucket/orchard` |
+| App | Manifest | Version | Description | Install Command |
+|-----|----------|---------|-------------|-----------------|
+| [axis](https://github.com/PR0Gorib/Axis) | [`axis.json`](bucket/axis.json) | `1.5.0` | Compare, rank, and organize anything (games, movies, tech, etc.). | `scoop install nautilus-bucket/axis` |
+| [bridge](https://github.com/joaoguilherme-devsec/Bridge) | [`bridge.json`](bucket/bridge.json) | `3.4.6` | Rhythm game chart search & downloader for Clone Hero & YARG. Community fork of Gravitron's Bridge (provided as-is). | `scoop install nautilus-bucket/bridge` |
+| [da-tunes](https://github.com/VikrantRuhela/DA-Tunes) | [`da-tunes.json`](bucket/da-tunes.json) | `1.1` | Modern cross-platform music player for Windows & Android powered by YouTube Music. | `scoop install nautilus-bucket/da-tunes` |
+| [orchard](https://github.com/SFG5453/Orchard) | [`orchard.json`](bucket/orchard.json) | `4.2.0` | Desktop YouTube Music client with smart crossfade, synced lyrics, and release tracking. | `scoop install nautilus-bucket/orchard` |
 
 ## Updating Apps
 

@@ -48,7 +48,7 @@ scoop update *
 
 ## Manifest Structure
 
-Each manifest in `bucket/` adheres to [Scoop's manifest schema](https://github.com/ScoopInstaller/Scoop/blob/master/docs/manifest-format.md) and features:
+Each manifest in `bucket/` adheres to [Scoop's official manifest specification](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifests) and features:
 - Automatic upstream release tracking (`checkver` & `autoupdate`)
 - Start Menu shortcut creation (`shortcuts`)
 - Extraction of MSI and 7-Zip/NSIS installer binaries (`installer` & `extract_dir`)

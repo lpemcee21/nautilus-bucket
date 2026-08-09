@@ -1,0 +1,86 @@
+{
+  "version": "3.3.1",
+  "description": "An open-source low-code modding framework to create, manage, and use themes and plugins for the Steam desktop client.",
+  "homepage": "https://steambrew.app/",
+  "license": "MIT",
+  "notes": [
+    "Millennium integrates into Steam by placing wsock32.dll and the millennium directory inside your Steam installation folder.",
+    "Please ensure Steam is completely closed before installing, updating, or uninstalling Millennium."
+  ],
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/SteamClientHomebrew/Millennium/releases/download/v3.3.1/millennium-v3.3.1-windows-x86_64.zip",
+      "hash": "d05edc946841e775685c8e295d4c67d274d8ddeab5d739033228dd302391aa8a"
+    }
+  },
+  "installer": {
+    "script": [
+      "if (Get-Process -Name 'steam' -ErrorAction SilentlyContinue) {",
+      "    Write-Warning 'Steam is currently running. Please exit Steam to ensure Millennium patches successfully.'",
+      "}",
+      "# Multi-strategy Steam directory detection",
+      "$steamPath = $null",
+      "if ($env:STEAM_PATH -and (Test-Path $env:STEAM_PATH)) {",
+      "    $steamPath = $env:STEAM_PATH",
+      "}",
+      "if (-not $steamPath -and (Test-Path 'HKCU:\\Software\\Valve\\Steam')) {",
+      "    $regPath = (Get-ItemProperty -Path 'HKCU:\\Software\\Valve\\Steam' -Name 'SteamPath' -ErrorAction SilentlyContinue).SteamPath",
+      "    if ($regPath) { $steamPath = $regPath.Replace('/', '\\') }",
+      "}",
+      "if (-not $steamPath -and (Test-Path 'HKLM:\\SOFTWARE\\WOW6432Node\\Valve\\Steam')) {",
+      "    $steamPath = (Get-ItemProperty -Path 'HKLM:\\SOFTWARE\\WOW6432Node\\Valve\\Steam' -Name 'InstallPath' -ErrorAction SilentlyContinue).InstallPath",
+      "}",
+      "if (-not $steamPath) {",
+      "    $scoopSteam = \"$env:USERPROFILE\\scoop\\apps\\steam\\current\"",
+      "    if (Test-Path $scoopSteam) { $steamPath = $scoopSteam }",
+      "}",
+      "if (-not $steamPath -and (Test-Path '${env:ProgramFiles(x86)}\\Steam')) {",
+      "    $steamPath = \"${env:ProgramFiles(x86)}\\Steam\"",
+      "}",
+      "if (-not $steamPath -and (Test-Path 'C:\\Steam')) {",
+      "    $steamPath = 'C:\\Steam'",
+      "}",
+      "if (-not $steamPath) {",
+      "    error 'Could not locate Steam installation path. Please install Steam or set $env:STEAM_PATH.'",
+      "    return",
+      "}",
+      "Write-Host \"[Millennium] Found Steam installation at: $steamPath\" -ForegroundColor Green",
+      "# Copy wsock32.dll and millennium directory to Steam",
+      "Copy-Item \"$dir\\wsock32.dll\" \"$steamPath\\wsock32.dll\" -Force",
+      "Copy-Item \"$dir\\millennium\" \"$steamPath\\millennium\" -Recurse -Force",
+      "# Store state file for clean uninstallation",
+      "Set-Content -Path \"$dir\\steam_path.txt\" -Value $steamPath -Force"
+    ]
+  },
+  "uninstaller": {
+    "script": [
+      "if (Get-Process -Name 'steam' -ErrorAction SilentlyContinue) {",
+      "    Write-Warning 'Steam is currently running. Please exit Steam before completing uninstallation.'",
+      "}",
+      "$steamPath = $null",
+      "if (Test-Path \"$dir\\steam_path.txt\") {",
+      "    $steamPath = (Get-Content \"$dir\\steam_path.txt\" -Raw).Trim()",
+      "}",
+      "if (-not $steamPath -and (Test-Path 'HKCU:\\Software\\Valve\\Steam')) {",
+      "    $regPath = (Get-ItemProperty -Path 'HKCU:\\Software\\Valve\\Steam' -Name 'SteamPath' -ErrorAction SilentlyContinue).SteamPath",
+      "    if ($regPath) { $steamPath = $regPath.Replace('/', '\\') }",
+      "}",
+      "if ($steamPath -and (Test-Path $steamPath)) {",
+      "    Write-Host \"[Millennium] Removing hook files from: $steamPath\" -ForegroundColor Yellow",
+      "    Remove-Item \"$steamPath\\wsock32.dll\" -Force -ErrorAction SilentlyContinue",
+      "    Remove-Item \"$steamPath\\millennium\" -Recurse -Force -ErrorAction SilentlyContinue",
+      "}"
+    ]
+  },
+  "checkver": {
+    "github": "SteamClientHomebrew/Millennium",
+    "regex": "v([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/SteamClientHomebrew/Millennium/releases/download/v$version/millennium-v$version-windows-x86_64.zip"
+      }
+    }
+  }
+}

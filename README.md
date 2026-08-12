@@ -33,6 +33,7 @@ scoop install nautilus-bucket/bridge
 | [axis](https://github.com/PR0Gorib/Axis) | [`axis.json`](bucket/axis.json) | `1.5.0` | Compare, rank, and organize anything (games, movies, tech, etc.). | `scoop install nautilus-bucket/axis` |
 | [bridge](https://github.com/joaoguilherme-devsec/Bridge) | [`bridge.json`](bucket/bridge.json) | `3.4.6` | Rhythm game chart search & downloader for Clone Hero & YARG. Community fork of Gravitron's Bridge (provided as-is). | `scoop install nautilus-bucket/bridge` |
 | [da-tunes](https://github.com/VikrantRuhela/DA-Tunes) | [`da-tunes.json`](bucket/da-tunes.json) | `1.1` | Modern cross-platform music player for Windows & Android powered by YouTube Music. | `scoop install nautilus-bucket/da-tunes` |
+| [gitdesktop](https://github.com/theBGuy/GitDesktop) | [`gitdesktop.json`](bucket/gitdesktop.json) | `0.8.0` | AI-native, keyboard-first desktop Git client built on Tauri 2. | `scoop install nautilus-bucket/gitdesktop` |
 | [millennium](https://github.com/SteamClientHomebrew/Millennium) | [`millennium.json`](bucket/millennium.json) | `3.3.1` | Modding framework for Steam desktop client themes & plugins with multi-location Steam detection. | `scoop install nautilus-bucket/millennium` |
 | [orchard](https://github.com/SFG5453/Orchard) | [`orchard.json`](bucket/orchard.json) | `4.2.0` | Desktop YouTube Music client with smart crossfade, synced lyrics, and release tracking. | `scoop install nautilus-bucket/orchard` |
 

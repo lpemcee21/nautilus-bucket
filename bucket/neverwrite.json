@@ -1,0 +1,38 @@
+{
+  "version": "0.7.1",
+  "description": "Your ultimate agentic markdown workspace",
+  "homepage": "https://neverwrite.app/",
+  "license": "Apache-2.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/jsgrrchg/NeverWrite/releases/download/v0.7.1/NeverWrite_0.7.1_Windows_x64_Setup.exe",
+      "hash": "7c781edff6b5dfc63a47514392dff47ba9664e55b76c23a13b69f82d3e76e41a"
+    }
+  },
+  "installer": {
+    "script": [
+      "Expand-7zipArchive \"$dir\\NeverWrite_${version}_Windows_x64_Setup.exe\" \"$dir\"",
+      "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+      "Remove-Item \"$dir\\NeverWrite_${version}_Windows_x64_Setup.exe\" -Force",
+      "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force"
+    ]
+  },
+  "bin": "NeverWrite.exe",
+  "shortcuts": [
+    [
+      "NeverWrite.exe",
+      "NeverWrite"
+    ]
+  ],
+  "checkver": {
+    "github": "jsgrrchg/NeverWrite",
+    "regex": "v([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/jsgrrchg/NeverWrite/releases/download/v$version/NeverWrite_${version}_Windows_x64_Setup.exe"
+      }
+    }
+  }
+}

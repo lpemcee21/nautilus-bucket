@@ -35,6 +35,7 @@ scoop install nautilus-bucket/bridge
 | [da-tunes](https://github.com/VikrantRuhela/DA-Tunes) | [`da-tunes.json`](bucket/da-tunes.json) | `1.1` | Modern cross-platform music player for Windows & Android powered by YouTube Music. | `scoop install nautilus-bucket/da-tunes` |
 | [gitdesktop](https://github.com/theBGuy/GitDesktop) | [`gitdesktop.json`](bucket/gitdesktop.json) | `0.8.0` | AI-native, keyboard-first desktop Git client built on Tauri 2. | `scoop install nautilus-bucket/gitdesktop` |
 | [millennium](https://github.com/SteamClientHomebrew/Millennium) | [`millennium.json`](bucket/millennium.json) | `3.3.1` | Modding framework for Steam desktop client themes & plugins with multi-location Steam detection. | `scoop install nautilus-bucket/millennium` |
+| [neverwrite](https://github.com/jsgrrchg/NeverWrite) | [`neverwrite.json`](bucket/neverwrite.json) | `0.7.1` | Your ultimate agentic markdown workspace. | `scoop install nautilus-bucket/neverwrite` |
 | [orchard](https://github.com/SFG5453/Orchard) | [`orchard.json`](bucket/orchard.json) | `4.2.0` | Desktop YouTube Music client with smart crossfade, synced lyrics, and release tracking. | `scoop install nautilus-bucket/orchard` |
 
 ## Updating Apps

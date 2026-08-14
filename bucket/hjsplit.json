@@ -1,0 +1,15 @@
+{
+  "version": "3.0",
+  "description": "Freeware standalone file splitter and joiner utility for Windows",
+  "homepage": "http://www.freebyte.com",
+  "license": "Freeware",
+  "url": "https://web.archive.org/web/20190531071935id_/http://www.freebyte.com/download/hjsplit.zip",
+  "hash": "4f184654df72a63066367378faac9b71b364705a69aa0002dcf4dc63d5b7c705",
+  "bin": "hjsplit.exe",
+  "shortcuts": [
+    [
+      "hjsplit.exe",
+      "HJSplit"
+    ]
+  ]
+}

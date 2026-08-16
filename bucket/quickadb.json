@@ -1,0 +1,37 @@
+{
+  "version": "5.3.2",
+  "description": "Python-based graphical interface for automating ADB & fastboot commands and workflows",
+  "homepage": "https://github.com/codefl0w/QuickADB",
+  "license": "GPL-3.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/codefl0w/QuickADB/releases/download/V5.3.2/QuickADB_V5.3.2_Windows_x86_64.exe#/QuickADB.exe",
+      "hash": "42996d6357f677a2e3979b88976f7ec37e39b1e4ef9004b1ea85546de5b94f69"
+    },
+    "arm64": {
+      "url": "https://github.com/codefl0w/QuickADB/releases/download/V5.3.2/QuickADB_V5.3.2_Windows_arm64.exe#/QuickADB.exe",
+      "hash": "9438bb1feb7be52a6087da8045478340ff44bba3591fd0449975ba6721a471ff"
+    }
+  },
+  "bin": "QuickADB.exe",
+  "shortcuts": [
+    [
+      "QuickADB.exe",
+      "QuickADB"
+    ]
+  ],
+  "checkver": {
+    "github": "codefl0w/QuickADB",
+    "regex": "V([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/codefl0w/QuickADB/releases/download/V$version/QuickADB_V$version_Windows_x86_64.exe#/QuickADB.exe"
+      },
+      "arm64": {
+        "url": "https://github.com/codefl0w/QuickADB/releases/download/V$version/QuickADB_V$version_Windows_arm64.exe#/QuickADB.exe"
+      }
+    }
+  }
+}

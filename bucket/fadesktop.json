@@ -1,0 +1,29 @@
+{
+  "version": "2.4.0",
+  "description": "Custom Telegram Desktop client with Material Design 3 UI and enhanced features",
+  "homepage": "https://github.com/fagramdesktop/fadesktop",
+  "license": "GPL-3.0-or-later",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/fagramdesktop/fadesktop/releases/download/2.4.0/FAgram_Win-x64_2.4.0_portable.zip",
+      "hash": "f7cb00dce9a59bf453317c11dc6486e2c64c8582bf333359807b22e42bb8220f"
+    }
+  },
+  "bin": "fagram.exe",
+  "shortcuts": [
+    [
+      "fagram.exe",
+      "FAgram"
+    ]
+  ],
+  "checkver": {
+    "github": "fagramdesktop/fadesktop"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/fagramdesktop/fadesktop/releases/download/$version/FAgram_Win-x64_$version_portable.zip"
+      }
+    }
+  }
+}

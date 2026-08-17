@@ -1,12 +1,12 @@
 {
-  "version": "0.8.0",
+  "version": "0.9.1",
   "description": "AI-native, keyboard-first desktop Git client built on Tauri 2",
   "homepage": "https://github.com/theBGuy/GitDesktop",
   "license": "Apache-2.0",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/theBGuy/GitDesktop/releases/download/v0.8.0/GitDesktop_0.8.0_x64_en-US.msi",
-      "hash": "502696c068e00b0b5f6f78b985497880ce4a0d615144fc766159cc39a8c04418"
+      "url": "https://github.com/theBGuy/GitDesktop/releases/download/v0.9.1/GitDesktop_0.9.1_x64_en-US.msi",
+      "hash": "4168f2c829845b53314f54b4c07cf35f1cdd3aa4a2ff28832f6bde445e9b54de"
     }
   },
   "extract_dir": "PFiles\\GitDesktop",

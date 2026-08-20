@@ -1,0 +1,36 @@
+{
+  "version": "0.9.21",
+  "description": "A custom Stremio client built for adventure",
+  "homepage": "https://github.com/harborstremio/harbor",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/harborstremio/harbor/releases/download/V0.9.21/Harbor_0.9.21_x64-setup.exe",
+      "hash": "c45f26729ab8efaaa8e466ec616ec0d769e730d167e7ed47c0bc837fa1414c7f"
+    }
+  },
+  "installer": {
+    "script": [
+      "Expand-7zipArchive \"$dir\\Harbor_${version}_x64-setup.exe\" \"$dir\"",
+      "Remove-Item \"$dir\\Harbor_${version}_x64-setup.exe\", \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Force -Recurse -ErrorAction SilentlyContinue"
+    ]
+  },
+  "bin": "harbor.exe",
+  "shortcuts": [
+    [
+      "harbor.exe",
+      "Harbor"
+    ]
+  ],
+  "checkver": {
+    "github": "harborstremio/harbor",
+    "regex": "V([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/harborstremio/harbor/releases/download/V$version/Harbor_$version_x64-setup.exe"
+      }
+    }
+  }
+}

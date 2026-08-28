@@ -30,6 +30,7 @@ scoop install nautilus-bucket/bridge
 
 | App | Manifest | Version | Description | Install Command |
 |-----|----------|---------|-------------|-----------------|
+| [augre](https://getaugre.com/) | [`augre.json`](bucket/augre.json) | `0.1.36` | Free desktop EPUB reader that reads books aloud with on-device AI voices. | `scoop install nautilus-bucket/augre` |
 | [axis](https://github.com/PR0Gorib/Axis) | [`axis.json`](bucket/axis.json) | `1.5.0` | Compare, rank, and organize anything (games, movies, tech, etc.). | `scoop install nautilus-bucket/axis` |
 | [bridge](https://github.com/joaoguilherme-devsec/Bridge) | [`bridge.json`](bucket/bridge.json) | `3.4.6` | Rhythm game chart search & downloader for Clone Hero & YARG. Community fork of Gravitron's Bridge (provided as-is). | `scoop install nautilus-bucket/bridge` |
 | [da-tunes](https://github.com/VikrantRuhela/DA-Tunes) | [`da-tunes.json`](bucket/da-tunes.json) | `1.1` | Modern cross-platform music player for Windows & Android powered by YouTube Music. | `scoop install nautilus-bucket/da-tunes` |

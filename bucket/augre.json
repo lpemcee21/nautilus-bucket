@@ -1,31 +1,31 @@
 {
-  "version": "0.1.36",
-  "description": "Free desktop EPUB reader that reads books aloud with on-device AI voices",
-  "homepage": "https://getaugre.com/",
-  "license": "Freeware",
-  "architecture": {
-    "64bit": {
-      "url": "https://bucket.getaugre.com/updates/app-v0.1.36/Augre_0.1.36_x64_en-US.msi",
-      "hash": "357427e31a88d4f203f21429049329d9a2b746cf0757832c98bb34a8ad92b0bf"
-    }
-  },
-  "extract_dir": "PFiles\\Augre",
-  "bin": "augre-app.exe",
-  "shortcuts": [
-    [
-      "augre-app.exe",
-      "Augre"
-    ]
-  ],
-  "checkver": {
-    "url": "https://getaugre.com/api/latest",
-    "jsonpath": "$.version"
-  },
-  "autoupdate": {
+    "version": "0.1.37",
+    "description": "Free desktop EPUB reader that reads books aloud with on-device AI voices",
+    "homepage": "https://getaugre.com/",
+    "license": "Freeware",
     "architecture": {
-      "64bit": {
-        "url": "https://bucket.getaugre.com/updates/app-v$version/Augre_$version_x64_en-US.msi"
-      }
+        "64bit": {
+            "url": "https://bucket.getaugre.com/updates/app-v0.1.37/Augre_0.1.37_x64_en-US.msi",
+            "hash": "82270a5acbef7e183b7246403f07a6f8ff3cd0e49ecee7a3340c01150098f3d5"
+        }
+    },
+    "extract_dir": "PFiles\\Augre",
+    "bin": "augre-app.exe",
+    "shortcuts": [
+        [
+            "augre-app.exe",
+            "Augre"
+        ]
+    ],
+    "checkver": {
+        "url": "https://getaugre.com/api/latest",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://bucket.getaugre.com/updates/app-v$version/Augre_$version_x64_en-US.msi"
+            }
+        }
     }
-  }
 }

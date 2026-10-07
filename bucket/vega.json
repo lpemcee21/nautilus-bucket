@@ -1,0 +1,36 @@
+{
+  "version": "2.1.0",
+  "description": "Open-source media streaming and casting engine for TV and Desktop",
+  "homepage": "https://vega.zendax.me/",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/vega-org/vega-desktop/releases/download/app-v2.1.0/Vega_2.1.0_x64-setup.exe",
+      "hash": "3b7a91d7cbc7e8743814322b3ae20d923c2dc0c1b9a1f48297343d030c9a8fc3"
+    }
+  },
+  "installer": {
+    "script": [
+      "Expand-7zipArchive \"$dir\\Vega_${version}_x64-setup.exe\" \"$dir\"",
+      "Remove-Item \"$dir\\Vega_${version}_x64-setup.exe\", \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Force -Recurse -ErrorAction SilentlyContinue"
+    ]
+  },
+  "bin": "Vega.exe",
+  "shortcuts": [
+    [
+      "Vega.exe",
+      "Vega"
+    ]
+  ],
+  "checkver": {
+    "github": "vega-org/vega-desktop",
+    "regex": "app-v([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/vega-org/vega-desktop/releases/download/app-v$version/Vega_$version_x64-setup.exe"
+      }
+    }
+  }
+}

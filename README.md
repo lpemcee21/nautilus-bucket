@@ -43,6 +43,7 @@ scoop install nautilus-bucket/bridge
 | [neverwrite](https://github.com/jsgrrchg/NeverWrite) | [`neverwrite.json`](bucket/neverwrite.json) | `0.7.1` | Your ultimate agentic markdown workspace. | `scoop install nautilus-bucket/neverwrite` |
 | [orchard](https://github.com/SFG5453/Orchard) | [`orchard.json`](bucket/orchard.json) | `4.7.3` | Desktop YouTube Music client with smart crossfade, synced lyrics, and release tracking. | `scoop install nautilus-bucket/orchard` |
 | [quickadb](https://github.com/codefl0w/QuickADB) | [`quickadb.json`](bucket/quickadb.json) | `5.3.2` | Python-based graphical interface for automating ADB & fastboot commands. | `scoop install nautilus-bucket/quickadb` |
+| [vega](https://vega.zendax.me/) | [`vega.json`](bucket/vega.json) | `2.1.0` | Open-source media streaming and casting engine for TV and Desktop. | `scoop install nautilus-bucket/vega` |
 
 ## Updating Apps
 

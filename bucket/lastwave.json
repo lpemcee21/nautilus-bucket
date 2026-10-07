@@ -1,0 +1,30 @@
+{
+  "version": "1.2.0",
+  "description": "High-Resolution Lossless Desktop Music Player for Windows, Linux & macOS",
+  "homepage": "https://github.com/Clash-Projects/LastWave-Desktop",
+  "license": "Unknown",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/Clash-Projects/LastWave-Desktop/releases/download/v1.2.0/lastwave_1.2.0_windows-x86_64-portable.zip",
+      "hash": "b0ba850e67c6601a00360c9abf10f9409f5e2f1efa3967e7c33d800368aa0c3e"
+    }
+  },
+  "bin": "lastwave_desktop.exe",
+  "shortcuts": [
+    [
+      "lastwave_desktop.exe",
+      "LastWave"
+    ]
+  ],
+  "checkver": {
+    "github": "Clash-Projects/LastWave-Desktop",
+    "regex": "v([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/Clash-Projects/LastWave-Desktop/releases/download/v$version/lastwave_$version_windows-x86_64-portable.zip"
+      }
+    }
+  }
+}

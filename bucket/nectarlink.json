@@ -1,0 +1,47 @@
+{
+    "version": "0.1.4",
+    "description": "Your Android phone and your PC, working as one. Notifications, messages, calls, clipboard, files, photos, screen mirroring and phone apps in windows. Local-first, encrypted, no account.",
+    "homepage": "https://github.com/thtbee/nectarlink",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "Runs portable from scoop; app data (identity key, SQLite, logs) lives in %LOCALAPPDATA%\\Nectarlink and survives updates by itself.",
+        "Phone-as-webcam needs the bundled nectarlink_vcam.dll registered as a COM component; run 'nectarlink-desktop.exe --register-vcam' from an admin prompt once, or use the official installer which does it during setup.",
+        "Phone side: pair the APK on your Pixel from the same GitHub release. Obtainium supports it directly (GitHub - thtbee/nectarlink, APK from releases)."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/thtbee/nectarlink/releases/download/v0.1.4/Nectarlink-0.1.4-x64-setup.exe",
+            "hash": "afdf6d9c1b94647a7888735193cfab24f6bb3236c98b8da51533ee0ffb516528"
+        }
+    },
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\Nectarlink-$version-x64-setup.exe\" \"$dir\\raw\"",
+            "Get-ChildItem \"$dir\\raw\" | Where-Object { $_.Name -notlike '$*' } | Move-Item -Destination \"$dir\" -Force",
+            "if (Test-Path \"$dir\\raw\\`$_2_\") { Get-ChildItem \"$dir\\raw\\`$_2_\" | Move-Item -Destination \"$dir\" -Force }",
+            "Remove-Item \"$dir\\raw\", \"$dir\\Nectarlink-$version-x64-setup.exe\" -Recurse -Force -ErrorAction SilentlyContinue"
+        ]
+    },
+    "bin": "nectarlink-desktop.exe",
+    "shortcuts": [
+        [
+            "nectarlink-desktop.exe",
+            "NectarLink"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/thtbee/nectarlink",
+        "regex": "/releases/download/v([\\d.]+)/Nectarlink"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/thtbee/nectarlink/releases/download/v$version/Nectarlink-$version-x64-setup.exe"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/thtbee/nectarlink/releases/download/v$version/SHA256SUMS.txt",
+            "find": "$basename\\s+$sha256"
+        }
+    }
+}

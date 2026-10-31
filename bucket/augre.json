@@ -1,12 +1,12 @@
 {
-    "version": "0.1.48",
+    "version": "0.1.50",
     "description": "Free desktop EPUB reader that reads books aloud with on-device AI voices",
     "homepage": "https://getaugre.com/",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://bucket.getaugre.com/updates/app-v0.1.48/Augre_0.1.48_x64_en-US.msi",
-            "hash": "dc1b22e15fc3eeadf6c5d59ae0149744a036dd90f559c3c7248c2e55806707cb"
+            "url": "https://bucket.getaugre.com/updates/app-v0.1.50/Augre_0.1.50_x64_en-US.msi",
+            "hash": "0ee490950af6802d2e68aeae9d00b7ec041f5cdb0bf7441ed3fcdb4732b92514"
         }
     },
     "extract_dir": "PFiles\\Augre",

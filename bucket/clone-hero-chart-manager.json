@@ -1,0 +1,45 @@
+{
+  "version": "1.6.9",
+  "description": "Search, preview, download and convert Clone Hero and YARG charts from RhythmVerse and Chorus Encore.",
+  "homepage": "https://chartmanager.app/",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/xlzipx/clone-hero-chart-manager/releases/download/v1.6.9/CHM-Setup-1.6.9.exe",
+      "hash": "e25690d791f5e113d84f3615c298279a432699e49b93a14deaa3c5f02f9b20f3"
+    }
+  },
+  "installer": {
+    "script": [
+      "Expand-7zipArchive \"$dir\\CHM-Setup-$version.exe\" \"$dir\"",
+      "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+      "Remove-Item \"$dir\\CHM-Setup-$version.exe\", \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse -ErrorAction SilentlyContinue"
+    ]
+  },
+  "bin": [
+    [
+      "Clone Hero Chart Manager.exe",
+      "clone-hero-chart-manager"
+    ],
+    [
+      "Clone Hero Chart Manager.exe",
+      "chm"
+    ]
+  ],
+  "shortcuts": [
+    [
+      "Clone Hero Chart Manager.exe",
+      "Clone Hero Chart Manager"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/xlzipx/clone-hero-chart-manager"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/xlzipx/clone-hero-chart-manager/releases/download/v$version/CHM-Setup-$version.exe"
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+    "version": "0.8.20",
+    "description": "Native, local-first alternative to Logitech Options+, written in Rust. Remap buttons, drive DPI and SmartShift over HID++ — no account, no telemetry.",
+    "homepage": "https://openlogi.org/",
+    "license": "MIT|Apache-2.0",
+    "notes": [
+        "Quit Logi Options+ before launching OpenLogi — only one application can own a receiver at a time.",
+        "Configuration is stored in %USERPROFILE%\\.config\\openlogi\\config.toml and persists across Scoop updates."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AprilNEA/OpenLogi/releases/download/v0.8.20/OpenLogi-v0.8.20-windows-x86_64.zip",
+            "hash": "730314fd6863d6cf3b7043d20c12c8064e1271f7c0f3bb898b19192f63baef35"
+        },
+        "arm64": {
+            "url": "https://github.com/AprilNEA/OpenLogi/releases/download/v0.8.20/OpenLogi-v0.8.20-windows-arm64.zip",
+            "hash": "4f60f312cf9b89503a647dcd1061e85faa47546506ec917272081626248b2158"
+        }
+    },
+    "pre_uninstall": "Get-Process -Name 'OpenLogi', 'openlogi-agent', 'openlogi-overlay' -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue",
+    "bin": "bin\\openlogi.exe",
+    "shortcuts": [
+        [
+            "OpenLogi.exe",
+            "OpenLogi"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/AprilNEA/OpenLogi"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/AprilNEA/OpenLogi/releases/download/v$version/OpenLogi-v$version-windows-x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/AprilNEA/OpenLogi/releases/download/v$version/OpenLogi-v$version-windows-arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}

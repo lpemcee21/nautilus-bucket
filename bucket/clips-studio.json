@@ -1,0 +1,50 @@
+{
+    "version": "2.1.0",
+    "description": "Clips Kitty — free, open-source local AI video clipper that turns long streams and raw gameplay recordings into auto-captioned Shorts, Reels, and TikToks.",
+    "homepage": "https://github.com/ColinGPT9/clips-studio",
+    "license": "AGPL-3.0-or-later",
+    "notes": [
+        "Clips Studio was renamed to Clips Kitty at v1.1.3; both 'clips-studio' and 'clips-kitty' shims are provided.",
+        "Bundled with FFmpeg, Ollama runtime, Whisper, YOLOv8, and TalkNet weights. On first launch, the setup wizard downloads a local LLM (e.g. Gemma) based on your GPU VRAM, or you can connect OpenRouter.",
+        "For raw game captures, enable 'Gaming / Reaction' in the Generate bar before processing so framing, game-audio (PANNs), and on-screen banner OCR scoring are active.",
+        "App data, downloaded models, and rendered clips are stored in %LOCALAPPDATA%\\Clips Studio and %APPDATA%\\clips-studio and persist across Scoop updates."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://huggingface.co/ColinGPT9/clips-studio-releases/resolve/main/ClipsKitty-2.1.0-x64.zip",
+            "hash": "7af93e64398be7e3e1932dd68a634e98f8e9c6d4dc123210914e067f91851908"
+        }
+    },
+    "pre_uninstall": "Get-Process -Name 'Clips Kitty' -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue",
+    "bin": [
+        [
+            "Clips Kitty.exe",
+            "clips-studio"
+        ],
+        [
+            "Clips Kitty.exe",
+            "clips-kitty"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Clips Kitty.exe",
+            "Clips Kitty"
+        ]
+    ],
+    "checkver": {
+        "url": "https://huggingface.co/ColinGPT9/clips-studio-releases/resolve/main/latest.yml",
+        "regex": "version:\\s*([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://huggingface.co/ColinGPT9/clips-studio-releases/resolve/main/ClipsKitty-$version-x64.zip",
+                "hash": {
+                    "url": "https://huggingface.co/api/models/ColinGPT9/clips-studio-releases/tree/main",
+                    "jsonpath": "$[?(@.path == '$basename')].lfs.oid"
+                }
+            }
+        }
+    }
+}

@@ -21,8 +21,7 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/codefl0w/QuickADB",
-        "regex": "V([\\d.]+)"
+        "github": "https://github.com/codefl0w/QuickADB"
     },
     "autoupdate": {
         "architecture": {

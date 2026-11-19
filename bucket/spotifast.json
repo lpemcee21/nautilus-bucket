@@ -1,7 +1,7 @@
 {
     "version": "0.17.2",
-    "description": "Fast desktop Spotify client built with Rust and Tauri",
-    "homepage": "https://github.com/crmne/spotifast",
+    "description": "Spotify, native and fast. A lightweight desktop music client built with Rust and egui",
+    "homepage": "https://spotifast.rocks/",
     "license": "MIT",
     "architecture": {
         "64bit": {
@@ -15,16 +15,15 @@
             "extract_dir": "spotifast-v0.17.2-aarch64-pc-windows-msvc"
         }
     },
-    "bin": "fastpotify.exe",
+    "bin": "spotifast.exe",
     "shortcuts": [
         [
-            "fastpotify.exe",
-            "Fastpotify"
+            "spotifast.exe",
+            "Spotifast"
         ]
     ],
     "checkver": {
-        "github": "https://github.com/crmne/spotifast",
-        "regex": "v([\\d.]+)"
+        "github": "https://github.com/crmne/spotifast"
     },
     "autoupdate": {
         "architecture": {
@@ -36,6 +35,9 @@
                 "url": "https://github.com/crmne/spotifast/releases/download/v$version/spotifast-v$version-aarch64-pc-windows-msvc.zip",
                 "extract_dir": "spotifast-v$version-aarch64-pc-windows-msvc"
             }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
         }
     }
 }

@@ -18,8 +18,7 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/theBGuy/GitDesktop",
-        "regex": "v([\\d.]+)"
+        "github": "https://github.com/theBGuy/GitDesktop"
     },
     "autoupdate": {
         "architecture": {

@@ -25,8 +25,7 @@
     ]
   ],
   "checkver": {
-    "github": "https://github.com/joaoguilherme-devsec/Bridge",
-    "regex": "v([\\d.]+)"
+    "github": "https://github.com/joaoguilherme-devsec/Bridge"
   },
   "autoupdate": {
     "architecture": {

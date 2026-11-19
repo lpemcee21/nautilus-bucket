@@ -11,7 +11,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/thtbee/nectarlink/releases/download/v0.1.5/Nectarlink-0.1.5-x64-setup.exe",
-            "hash": "c516907e76e61fa5ad18048e93836a289974a46e7f2a8ff6fade79234ea9be6d"
+            "hash": "9db9066b7024283a22db0ea026cd52584a0646a888239c559c0417eac6f32ac4"
         }
     },
     "installer": {
@@ -30,8 +30,7 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/thtbee/nectarlink",
-        "regex": "v?([\\d.]+)"
+        "github": "https://github.com/thtbee/nectarlink"
     },
     "autoupdate": {
         "architecture": {
@@ -40,8 +39,7 @@
             }
         },
         "hash": {
-            "url": "https://github.com/thtbee/nectarlink/releases/download/v$version/SHA256SUMS.txt",
-            "find": "$basename\\s+$sha256"
+            "url": "$baseurl/SHA256SUMS.txt"
         }
     }
 }

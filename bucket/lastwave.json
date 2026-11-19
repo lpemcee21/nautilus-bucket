@@ -17,8 +17,7 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/Clash-Projects/LastWave-Desktop",
-        "regex": "v([\\d.]+)"
+        "github": "https://github.com/Clash-Projects/LastWave-Desktop"
     },
     "autoupdate": {
         "architecture": {

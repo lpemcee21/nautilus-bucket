@@ -18,8 +18,7 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/PR0Gorib/Axis",
-        "regex": "v([\\d.]+)"
+        "github": "https://github.com/PR0Gorib/Axis"
     },
     "autoupdate": {
         "architecture": {

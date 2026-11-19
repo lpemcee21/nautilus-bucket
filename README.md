@@ -30,24 +30,25 @@ scoop install nautilus-bucket/bridge
 
 | App | Manifest | Version | Description | Install Command |
 |-----|----------|---------|-------------|-----------------|
-| [augre](https://getaugre.com/) | [`augre.json`](bucket/augre.json) | `0.1.37` | Free desktop EPUB reader that reads books aloud with on-device AI voices. | `scoop install nautilus-bucket/augre` |
-| [axis](https://github.com/PR0Gorib/Axis) | [`axis.json`](bucket/axis.json) | `1.5.0` | Compare, rank, and organize anything (games, movies, tech, etc.). | `scoop install nautilus-bucket/axis` |
+| [augre](https://getaugre.com/) | [`augre.json`](bucket/augre.json) | `0.1.58` | Free desktop EPUB reader that reads books aloud with on-device AI voices. | `scoop install nautilus-bucket/augre` |
+| [axis](https://github.com/PR0Gorib/Axis) | [`axis.json`](bucket/axis.json) | `1.8.0` | Compare, rank, and organize anything (games, movies, tech, etc.). | `scoop install nautilus-bucket/axis` |
 | [bridge](https://github.com/joaoguilherme-devsec/Bridge) | [`bridge.json`](bucket/bridge.json) | `3.4.6` | Rhythm game chart search & downloader for Clone Hero & YARG. Community fork of Gravitron's Bridge (provided as-is). | `scoop install nautilus-bucket/bridge` |
 | [clips-studio](https://github.com/ColinGPT9/clips-studio) | [`clips-studio.json`](bucket/clips-studio.json) | `2.1.0` | Clips Kitty — local AI video clipper that turns long streams and raw gameplay into auto-captioned Shorts, Reels, and TikToks. | `scoop install nautilus-bucket/clips-studio` |
 | [clone-hero-chart-manager](https://github.com/xlzipx/clone-hero-chart-manager) | [`clone-hero-chart-manager.json`](bucket/clone-hero-chart-manager.json) | `1.6.9` | Search, preview, download and convert Clone Hero and YARG charts from RhythmVerse and Chorus Encore. | `scoop install nautilus-bucket/clone-hero-chart-manager` |
-| [da-tunes](https://github.com/VikrantRuhela/DA-Tunes) | [`da-tunes.json`](bucket/da-tunes.json) | `1.1` | Modern cross-platform music player for Windows & Android powered by YouTube Music. | `scoop install nautilus-bucket/da-tunes` |
-| [fadesktop](https://github.com/fagramdesktop/fadesktop) | [`fadesktop.json`](bucket/fadesktop.json) | `2.4.0` | Custom Telegram Desktop client with Material Design 3 UI and enhanced features. | `scoop install nautilus-bucket/fadesktop` |
-| [fastpotify](https://github.com/crmne/fastpotify) | [`fastpotify.json`](bucket/fastpotify.json) | `0.4.1` | Fast desktop Spotify client built with Rust and Tauri. | `scoop install nautilus-bucket/fastpotify` |
-| [gitdesktop](https://github.com/theBGuy/GitDesktop) | [`gitdesktop.json`](bucket/gitdesktop.json) | `0.9.1` | AI-native, keyboard-first desktop Git client built on Tauri 2. | `scoop install nautilus-bucket/gitdesktop` |
-| [harbor](https://github.com/harborstremio/harbor) | [`harbor.json`](bucket/harbor.json) | `0.9.21` | A custom Stremio client built for adventure. | `scoop install nautilus-bucket/harbor` |
+| [da-tunes](https://github.com/VikrantRuhela/DA-Tunes) | [`da-tunes.json`](bucket/da-tunes.json) | `2.0` | Modern cross-platform music player for Windows & Android powered by YouTube Music. | `scoop install nautilus-bucket/da-tunes` |
+| [fadesktop](https://github.com/fagramdesktop/fadesktop) | [`fadesktop.json`](bucket/fadesktop.json) | `2.6.0` | Custom Telegram Desktop client with Material Design 3 UI and enhanced features. | `scoop install nautilus-bucket/fadesktop` |
+| [gitdesktop](https://github.com/theBGuy/GitDesktop) | [`gitdesktop.json`](bucket/gitdesktop.json) | `0.15.0` | AI-native, keyboard-first desktop Git client built on Tauri 2. | `scoop install nautilus-bucket/gitdesktop` |
+| [harbor](https://github.com/Harborofficial/Harbor) | [`harbor.json`](bucket/harbor.json) | `1.0.3-beta` | A custom Stremio client built for adventure. | `scoop install nautilus-bucket/harbor` |
 | [hjsplit](https://sourceforge.net/app/hjsplit/) | [`hjsplit.json`](bucket/hjsplit.json) | `3.0` | Freeware standalone file splitter and joiner utility for Windows. | `scoop install nautilus-bucket/hjsplit` |
-| [lastwave](https://github.com/Clash-Projects/LastWave-Desktop) | [`lastwave.json`](bucket/lastwave.json) | `1.2.0` | High-Resolution Lossless Desktop Music Player for Windows, Linux & macOS. | `scoop install nautilus-bucket/lastwave` |
-| [millennium](https://github.com/SteamClientHomebrew/Millennium) | [`millennium.json`](bucket/millennium.json) | `3.3.1` | Modding framework for Steam desktop client themes & plugins with multi-location Steam detection. | `scoop install nautilus-bucket/millennium` |
-| [neverwrite](https://github.com/jsgrrchg/NeverWrite) | [`neverwrite.json`](bucket/neverwrite.json) | `0.7.1` | Your ultimate agentic markdown workspace. | `scoop install nautilus-bucket/neverwrite` |
-| [openlogi](https://openlogi.org/) | [`openlogi.json`](bucket/openlogi.json) | `0.8.20` | Native, local-first alternative to Logitech Options+, written in Rust. Remap buttons, drive DPI and SmartShift over HID++. | `scoop install nautilus-bucket/openlogi` |
-| [orchard](https://github.com/SFG5453/Orchard) | [`orchard.json`](bucket/orchard.json) | `4.7.3` | Desktop YouTube Music client with smart crossfade, synced lyrics, and release tracking. | `scoop install nautilus-bucket/orchard` |
-| [quickadb](https://github.com/codefl0w/QuickADB) | [`quickadb.json`](bucket/quickadb.json) | `5.3.2` | Python-based graphical interface for automating ADB & fastboot commands. | `scoop install nautilus-bucket/quickadb` |
-| [vega](https://vega.zendax.me/) | [`vega.json`](bucket/vega.json) | `2.1.0` | Open-source media streaming and casting engine for TV and Desktop. | `scoop install nautilus-bucket/vega` |
+| [lastwave](https://github.com/Clash-Projects/LastWave-Desktop) | [`lastwave.json`](bucket/lastwave.json) | `2.1.0` | High-Resolution Lossless Desktop Music Player for Windows, Linux & macOS. | `scoop install nautilus-bucket/lastwave` |
+| [millennium](https://github.com/SteamClientHomebrew/Millennium) | [`millennium.json`](bucket/millennium.json) | `3.6.3` | Modding framework for Steam desktop client themes & plugins with multi-location Steam detection. | `scoop install nautilus-bucket/millennium` |
+| [nectarlink](https://github.com/thtbee/nectarlink) | [`nectarlink.json`](bucket/nectarlink.json) | `0.1.5` | Local-first, encrypted Android-to-PC bridge for notifications, messages, calls, clipboard, files, screen mirroring, and webcam. | `scoop install nautilus-bucket/nectarlink` |
+| [neverwrite](https://github.com/jsgrrchg/NeverWrite) | [`neverwrite.json`](bucket/neverwrite.json) | `0.8.15` | Your ultimate agentic markdown workspace. | `scoop install nautilus-bucket/neverwrite` |
+| [openlogi](https://openlogi.org/) | [`openlogi.json`](bucket/openlogi.json) | `0.9.0` | Native, local-first alternative to Logitech Options+, written in Rust. Remap buttons, drive DPI and SmartShift over HID++. | `scoop install nautilus-bucket/openlogi` |
+| [orchard](https://sfg545.dev/orchard/) | [`orchard.json`](bucket/orchard.json) | `2.0.10-canary.1` | Power-user native Qt 6 desktop client for YouTube Music and Apple Music. | `scoop install nautilus-bucket/orchard` |
+| [quickadb](https://github.com/codefl0w/QuickADB) | [`quickadb.json`](bucket/quickadb.json) | `5.3.6` | Python-based graphical interface for automating ADB & fastboot commands. | `scoop install nautilus-bucket/quickadb` |
+| [spotifast](https://spotifast.rocks/) | [`spotifast.json`](bucket/spotifast.json) | `0.17.2` | Spotify, native and fast — lightweight desktop music client built with Rust and egui (formerly `fastpotify`). | `scoop install nautilus-bucket/spotifast` |
+| [vega](https://vega.zendax.me/) | [`vega.json`](bucket/vega.json) | `2.3.0` | Open-source media streaming and casting engine for TV and Desktop. | `scoop install nautilus-bucket/vega` |
 
 ## Updating Apps
 

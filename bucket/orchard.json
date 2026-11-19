@@ -1,37 +1,30 @@
 {
-    "version": "4.7.3",
-    "description": "A desktop YouTube Music client with smart crossfade, synced lyrics, release tracking, and native builds.",
+    "version": "2.0.10-canary.1",
+    "description": "The power-user native Qt 6 desktop client for YouTube Music and Apple Music.",
     "homepage": "https://sfg545.dev/orchard/",
     "license": "AGPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://downloads.sfg545.dev/orchard/Orchard-Setup-4.7.3.exe",
-            "hash": "8e64b5635e52736198a530fc9cc60d0b77b9315774f6b452bbe1080f4391466f"
+            "url": "https://depot.sfg545.dev/downloads/canary/2.0.10-canary.1/Orchard-Windows-x86_64.7z",
+            "hash": "3a096ae8ab50ace58e5e180c2ed4eda7048b97ae245c7aab3eacde1ff8401e8b"
         }
     },
-    "installer": {
-        "script": [
-            "Expand-7zipArchive \"$dir\\Orchard-Setup-$version.exe\" \"$dir\"",
-            "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-            "Remove-Item \"$dir\\Orchard-Setup-$version.exe\" -Force",
-            "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force"
-        ]
-    },
-    "bin": "Orchard.exe",
+    "extract_dir": "Orchard",
+    "bin": "orchard.exe",
     "shortcuts": [
         [
-            "Orchard.exe",
+            "orchard.exe",
             "Orchard"
         ]
     ],
     "checkver": {
-        "url": "https://downloads.sfg545.dev/orchard/latest.yml",
-        "regex": "version:\\s*([\\d.]+)"
+        "url": "https://depot.sfg545.dev/releases/canary-notes.json",
+        "jsonpath": "$[0].version"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://downloads.sfg545.dev/orchard/Orchard-Setup-$version.exe"
+                "url": "https://depot.sfg545.dev/downloads/canary/$version/Orchard-Windows-x86_64.7z"
             }
         }
     }

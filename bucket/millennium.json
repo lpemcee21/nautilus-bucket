@@ -124,8 +124,7 @@
         ]
     },
     "checkver": {
-        "github": "https://github.com/SteamClientHomebrew/Millennium",
-        "regex": "v([\\d.]+)"
+        "github": "https://github.com/SteamClientHomebrew/Millennium"
     },
     "autoupdate": {
         "architecture": {

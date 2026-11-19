@@ -1,5 +1,5 @@
 {
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "Your Android phone and your PC, working as one. Notifications, messages, calls, clipboard, files, photos, screen mirroring and phone apps in windows. Local-first, encrypted, no account.",
     "homepage": "https://github.com/thtbee/nectarlink",
     "license": "GPL-3.0-or-later",
@@ -10,8 +10,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/thtbee/nectarlink/releases/download/v0.1.4/Nectarlink-0.1.4-x64-setup.exe",
-            "hash": "afdf6d9c1b94647a7888735193cfab24f6bb3236c98b8da51533ee0ffb516528"
+            "url": "https://github.com/thtbee/nectarlink/releases/download/v0.1.5/Nectarlink-0.1.5-x64-setup.exe",
+            "hash": "c516907e76e61fa5ad18048e93836a289974a46e7f2a8ff6fade79234ea9be6d"
         }
     },
     "installer": {
@@ -31,7 +31,7 @@
     ],
     "checkver": {
         "github": "https://github.com/thtbee/nectarlink",
-        "regex": "/releases/download/v([\\d.]+)/Nectarlink"
+        "regex": "v?([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {

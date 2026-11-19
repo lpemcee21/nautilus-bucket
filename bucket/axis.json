@@ -1,31 +1,31 @@
 {
-  "version": "1.5.0",
-  "description": "Axis is an open-source desktop application built with HTML, CSS, JavaScript, and Tauri that lets you compare, rank, and organize virtually anything. Games, movies, anime, phones, PC hardware, books, cars — if it can be rated, it can be ranked.",
-  "homepage": "https://github.com/PR0Gorib/Axis",
-  "license": "MIT",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/PR0Gorib/Axis/releases/download/v1.5.0/Axis_1.5.0_x64_en-US.msi",
-      "hash": "2bcb5fc2a7e07a6f42b90ac137cb26ec56441a8450766be3de29b0fd6aa35344"
-    }
-  },
-  "extract_dir": "PFiles\\Axis",
-  "bin": "Axis.exe",
-  "shortcuts": [
-    [
-      "Axis.exe",
-      "Axis"
-    ]
-  ],
-  "checkver": {
-    "github": "PR0Gorib/Axis",
-    "regex": "v([\\d.]+)"
-  },
-  "autoupdate": {
+    "version": "1.8.0",
+    "description": "Axis is an open-source desktop application built with HTML, CSS, JavaScript, and Tauri that lets you compare, rank, and organize virtually anything. Games, movies, anime, phones, PC hardware, books, cars — if it can be rated, it can be ranked.",
+    "homepage": "https://github.com/PR0Gorib/Axis",
+    "license": "MIT",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/PR0Gorib/Axis/releases/download/v$version/Axis_$version_x64_en-US.msi"
-      }
+        "64bit": {
+            "url": "https://github.com/PR0Gorib/Axis/releases/download/v1.8.0/Axis_1.8.0_x64_en-US.msi",
+            "hash": "31071ef3fd4e1f04501671c7762d7e6fad0e8b26375729c276b78635abf99282"
+        }
+    },
+    "extract_dir": "PFiles\\Axis",
+    "bin": "Axis.exe",
+    "shortcuts": [
+        [
+            "Axis.exe",
+            "Axis"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/PR0Gorib/Axis",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/PR0Gorib/Axis/releases/download/v$version/Axis_$version_x64_en-US.msi"
+            }
+        }
     }
-  }
 }

@@ -25,7 +25,7 @@
     ]
   ],
   "checkver": {
-    "github": "joaoguilherme-devsec/Bridge",
+    "github": "https://github.com/joaoguilherme-devsec/Bridge",
     "regex": "v([\\d.]+)"
   },
   "autoupdate": {

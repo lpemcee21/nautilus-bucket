@@ -1,12 +1,12 @@
 {
-    "version": "2.0.10-canary.1",
+    "version": "2.0.11-canary.1",
     "description": "The power-user native Qt 6 desktop client for YouTube Music and Apple Music.",
     "homepage": "https://sfg545.dev/orchard/",
     "license": "AGPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://depot.sfg545.dev/downloads/canary/2.0.10-canary.1/Orchard-Windows-x86_64.7z",
-            "hash": "3a096ae8ab50ace58e5e180c2ed4eda7048b97ae245c7aab3eacde1ff8401e8b"
+            "url": "https://depot.sfg545.dev/downloads/canary/2.0.11-canary.1/Orchard-Windows-x86_64.7z",
+            "hash": "a5279792f7b40994aed9eea2259fee33e9ffb60dbdf613e1b76bc378a84dbe9f"
         }
     },
     "extract_dir": "Orchard",

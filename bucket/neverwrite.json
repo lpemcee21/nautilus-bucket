@@ -1,12 +1,12 @@
 {
-    "version": "0.8.15",
+    "version": "0.8.16",
     "description": "Your ultimate agentic markdown workspace",
     "homepage": "https://neverwrite.app/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jsgrrchg/NeverWrite/releases/download/v0.8.15/NeverWrite_0.8.15_Windows_x64_Setup.exe",
-            "hash": "18e2f47bd9cba168963f54d025bc503fcb85acad0eb191630f7d7a5a752d8d5a"
+            "url": "https://github.com/jsgrrchg/NeverWrite/releases/download/v0.8.16/NeverWrite_0.8.16_Windows_x64_Setup.exe",
+            "hash": "4198ad9fde8193e7ee89e0a6fb41d84c189a92a0e04276b6b7423fe8485ded96"
         }
     },
     "installer": {
